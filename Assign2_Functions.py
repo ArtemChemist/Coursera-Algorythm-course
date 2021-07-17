@@ -1,14 +1,17 @@
-def PairwiseProduct(numbers: list):
+def PairwiseProduct(nums: list):
+    numbers = nums[:]
     result = 0
     for i in numbers:
         ind_i = numbers.index(i)
-        for k in numbers:
-            ind_k = numbers.index(k)
-            if (ind_i != ind_k and i*k>result):
+        numbers_2 = numbers[:]
+        numbers_2.pop(ind_i)
+        for k in numbers_2:
+            if (i*k>result):
                 result = i*k
     return result
 
-def PairwiseProductFast(numbers: list):
+def PairwiseProductFast(nums: list):
+    numbers = nums[:]
     largest = 0
     for i in numbers:
         if (i>largest):

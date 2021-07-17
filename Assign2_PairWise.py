@@ -17,5 +17,5 @@ except ValueError:
     print('That was not a number y')
     
 print (Assign2_Functions.PairwiseProductFast(lst_int))
-
+print (Assign2_Functions.PairwiseProduct(lst_int))
 
