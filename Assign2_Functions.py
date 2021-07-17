@@ -10,13 +10,12 @@ def PairwiseProduct(numbers: list):
 
 def PairwiseProductFast(numbers: list):
     largest = 0
-    largest_ind = 0
     for i in numbers:
         if (i>largest):
             largest = i
-            largest_ind = numbers.index(largest)
     second_largest = 0
+    numbers.remove(largest)
     for k in numbers:
-        if (k>second_largest and numbers.index(k) != largest_ind):
+        if (k>second_largest):
             second_largest  = k
     return second_largest *largest  
