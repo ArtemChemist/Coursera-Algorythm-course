@@ -1,6 +1,3 @@
-# Uses python3
-import sys
-
 def lcm_naive(a, b):
     for l in range(1, a*b + 1):
         if l % a == 0 and l % b == 0:
@@ -8,8 +5,20 @@ def lcm_naive(a, b):
 
     return a*b
 
-if __name__ == '__main__':
-    input = sys.stdin.read()
-    a, b = map(int, input.split())
-    print(lcm_naive(a, b))
+def gcd(a, b):
+    if (b == 0):
+        return a
+    return gcd(b, a%b)
 
+def lcm(a, b):
+    if (a == 0 or b==0):
+        return 0
+    if (a>b):
+        return a*b//gcd(a,b)
+    else: 
+        return a*b//gcd(b,a)
+
+if __name__ == "__main__":
+    inpt = input()
+    a, b = map(int, inpt.split())
+    print(lcm(a, b))
