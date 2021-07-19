@@ -5,15 +5,15 @@ def get_fibonacci_last_digit_naive(n):
     if n <= 1:
         return n
 
-    previous = 0
-    current  = 1
-
-    for _ in range(n - 1):
-        previous, current = current, previous + current
-
-    return current % 10
+    F = []
+    F.append(0)
+    F.append(1)
+    for i in range(2,n+1):
+        last_digt = (F[i-1]+F[i-2])%10
+        F.append(last_digt)
+    return F[-1]
 
 if __name__ == '__main__':
-    input = sys.stdin.read()
-    n = int(input)
+
+    n = int(input())
     print(get_fibonacci_last_digit_naive(n))
