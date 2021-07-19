@@ -2,7 +2,7 @@
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        ".",
+        "./week2_algorithmic_warmup",
         "-p",
         "*_test.py"
     ],
