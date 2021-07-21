@@ -6,7 +6,7 @@ def binary_search(a, x):
     while (right-left >0):
         guess = left+(right-left)//2
         if (a[guess] > x):
-            right = guess-1
+            right = guess
         if (a[guess]<x):
             left = guess+1
         if(a[guess] == x):
