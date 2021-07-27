@@ -2,7 +2,7 @@
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        "./week2_algorithmic_warmup",
+        "./week4_divide_and_conquer",
         "-p",
         "*_test.py"
     ],
